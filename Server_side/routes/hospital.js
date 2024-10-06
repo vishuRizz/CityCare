@@ -4,7 +4,6 @@ const zwt = require("jsonwebtoken");
 const {
   Hospital,
   Doctor,
-  Availability,
   Patient,
   Appointment,
 } = require("../db");
@@ -53,6 +52,7 @@ const signinSchema = zod.object({
   email: zod.string(),
   password: zod.string(),
 });
+
 // signin route!
 router.post("/signin", async (req, res) => {
   const { email, password } = req.body;
