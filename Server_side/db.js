@@ -13,10 +13,6 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch((error) => console.error('Connection error:', error));
 
 
-// mongoose.connect(
-//   "mongodb+srv://vishurizz01:RzfgxKDYAOSSooKq@cluster0.7ozbuch.mongodb.net/Hospital_DB"
-// );
-
 const patientSchema = new mongoose.Schema(
   {
     name: { type: String },
