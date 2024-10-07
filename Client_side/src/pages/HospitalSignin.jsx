@@ -60,8 +60,6 @@ function HospitalSignin() {
                       password,
                     }
                   );
-
-                  // console.log("this is the response bc", response.data);
                   localStorage.setItem("token", response.data.token);
                   navigate(`/hospital-dashboard/${response.data.id}`);
                 } catch (error) {

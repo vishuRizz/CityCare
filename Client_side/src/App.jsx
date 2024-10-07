@@ -55,6 +55,7 @@ function App() {
             element={<SpecialDoctors />}
           />
           <Route path="/emergency" element={<Emergency />} />
+          <Route path="/hospital-dashboard" element={<HospitalDashboard />} />
         </Routes>
       </BrowserRouter>
     </>

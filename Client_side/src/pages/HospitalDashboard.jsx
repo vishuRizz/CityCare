@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
-import AddDoctor from "../components/AddDoctor"; // Make sure this is the correct path
+import AddDoctor from "../components/AddDoctor"; 
 
 function HospitalDashboard() {
   const [patients, setPatients] = useState([]);
@@ -17,6 +17,7 @@ function HospitalDashboard() {
           `http://localhost:3000/api/v1/hospital/get-patients/${hospitalId}`
         );
         setPatients(response.data.patients);
+        console.log(response.data)
       } catch (error) {
         console.error("Error fetching patients:", error);
       }
